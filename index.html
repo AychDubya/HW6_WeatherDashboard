@@ -12,42 +12,52 @@
 
 </head>
 
+</head>
+
 <body>
+  <header class="header bg-dark">
+    <h1>Aych's 5-Day Weather Dashboard</h1>
+  </header>
+  <div class="container">
+    <div class="row">
 
-    <div class="row justify-content-center" style='background-color: rgb(61, 67, 73)' id="titleDiv">
-        <h1 style="color:white;">Aych's 5-Day Weather Dashboard</h1>
-    </div>
-
-    <div class="container no-gutters m-4">
-        <div class="row">
-            <div class="col-4" id="SearchButtons">
-                <div class="row">
-                    <h1 class="col-12">Search for a City:</h1>
-                </div>
-                <div class="row">
-                    <form class="example col-12" action="action_page.php">
-                        <input class="cityInput" type="text" placeholder="Enter City..." name="search">
-                        <button type="button" class="btn btn-primary searchBtn">Search</button>
-                    </form>
-                </div>
-            </div>
+      <div class="col-sm-12 col-lg-3">
+        
+        <!-- User input for city weather -->
+        <form id="city-form">
+          <label for="city-input">Search for a city:</label><br>
+          <input type="text" id="city-input">
+   
+          <button type="submit" id="find-city" class="btn btn-primary btn-sm">
+            <i class="fa fa-search"></i>
+          </button>
+          <button id="clear-city-names" type="button" class="btn btn-primary btn-sm" title="Delete city list">X</button>
+        </form>
+        <div id="city-list"></div>
+      </div>
+      <div class="col-sm-12 col-lg-9">
+        <div class="card">
+          <div class="card-body">
+            <h1 id="city-name">______</h1>
+            <p>Temperature: <span id="city-temp"></span> &deg;F</p>
+            <p>Humidity: <span id="city-humid"></span>%</p>
+            <p>Wind Speed: <span id="city-wind"></span> MPH</p>
+            <p>Condition: <span id="city-condition"></span></p>
+          </div>
         </div>
-        <div class="col col-8" id="Current City Display"></div>
+        <div>
+            
+          <h1>5-Day Forecast:</h1>
+        </div>
+        <div class="card-deck" id="five-day-deck">
+        </div>
+      </div>
     </div>
 
-    </div>
+  </div>
 
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="./Assets/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./Assets/script.js"></script>
 </body>
-
 </html>
