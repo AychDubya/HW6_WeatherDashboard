@@ -23,7 +23,7 @@ $("#clear-city-names").on("click", function() {
 
 function getAPIs(city) {
 
-  const APIKey = "6b7834366ce293818a50ebbc1815bc61";
+  const APIKey = "f956b5b5b680cf195f6170822ea3301d";
   let fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city},us&units=imperial&appid=${APIKey}`;
   let mainQueryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city},us&units=imperial&appid=${APIKey}`;
 
